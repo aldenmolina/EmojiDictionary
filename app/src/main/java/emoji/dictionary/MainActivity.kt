@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     lateinit var layoutManager = LinearLayoutManager
+    lateinit var adapter : EmojiAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,5 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
+
+        adapter = EmojiAdapter()
+        recyclerView.adapter = adapter
     }
 }

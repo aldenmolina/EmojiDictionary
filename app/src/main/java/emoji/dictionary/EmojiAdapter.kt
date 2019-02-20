@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class EmojiAdapter : RecyclerView.Adapter<EmojiAdapter.TextHolder> {
+class EmojiAdapter : RecyclerView.Adapter<EmojiAdapter.TextHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): TextHolder {
         return TextHolder(LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_item_row, parent, false))
     }
